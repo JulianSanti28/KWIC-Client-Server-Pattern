@@ -13,7 +13,7 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>co.unicauca.clienteServidor</groupId>
             <artifactId>KwicCommons</artifactId>
             <version>${project.version}</version>
         </dependency>

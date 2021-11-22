@@ -4,6 +4,7 @@
  */
 package co.unicauca.clienteServidor.server;
 
+import co.unicauca.clienteServidor.Logica.RunKwic;
 import co.unicauca.clienteServidor.commons.infra.Protocol;
 import com.google.gson.Gson;
 import java.io.DataInputStream;
@@ -18,7 +19,6 @@ import java.util.logging.Logger;
  *
  * @author David E
  */
-
 public class kwicServidor {
 
     public static void main(String[] args) {
@@ -50,7 +50,7 @@ public class kwicServidor {
                 String mensaje = in.readUTF();
 
                 System.out.println(mensaje);
-                
+
                 //Le envio un mensaje
                 //out.writeUTF("¡Hola mundo desde el servidor!");
                 processRequest(mensaje);
@@ -65,7 +65,7 @@ public class kwicServidor {
         }
 
     }
-    
+
     /**
      * Procesar la solicitud que proviene de la aplicación cliente
      *
@@ -74,25 +74,21 @@ public class kwicServidor {
      * "{"resource":"customer","action":"get","parameters":[{"name":"id","value":"1"}]}"
      *
      */
-    
     //@Override
     protected static void processRequest(String requestJson) {
         // Convertir la solicitud a objeto Protocol para poderlo procesar
         Gson gson = new Gson();
         System.out.println(requestJson);
         Protocol protocolRequest = gson.fromJson(requestJson, Protocol.class);
-        
 
         System.out.println(protocolRequest.toString());
         switch (protocolRequest.getAction()) {
             case "get":
-                
-
+                RunKwic.Kwic(protocolRequest.getListaPalabras());
                 break;
             default:
                 break;
-        } 
-
+        }
 
     }
 
