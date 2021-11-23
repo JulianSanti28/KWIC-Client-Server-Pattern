@@ -12,6 +12,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,7 +22,9 @@ import java.util.logging.Logger;
  * @author David E
  */
 public class kwicServidor {
-
+    
+    private static List<String> lista = new ArrayList<>();
+            
     public static void main(String[] args) {
 
         ServerSocket servidor = null;
@@ -51,9 +55,14 @@ public class kwicServidor {
 
                 System.out.println(mensaje);
 
-                //Le envio un mensaje
-                //out.writeUTF("¡Hola mundo desde el servidor!");
+                
                 processRequest(mensaje);
+                
+                //Obj to Json
+                
+                //Le envio un mensaje
+                out.writeUTF(doFindCustomerRequestJson(lista));
+                
                 //Cierro el socket
                 sc.close();
                 System.out.println("Cliente desconectado");
@@ -81,15 +90,23 @@ public class kwicServidor {
         System.out.println(requestJson);
         Protocol protocolRequest = gson.fromJson(requestJson, Protocol.class);
 
-        System.out.println(protocolRequest.toString());
         switch (protocolRequest.getAction()) {
             case "get":
-                RunKwic.Kwic(protocolRequest.getListaPalabras());
+                lista = RunKwic.Kwic(protocolRequest.getListaPalabras());
                 break;
             default:
                 break;
         }
+    }
+    
+    private static String doFindCustomerRequestJson(List<String> listaResultante) {
+        Protocol protocol = new Protocol();
+        protocol.setParameters(listaResultante);
+        
+        Gson gson = new Gson();
+        String requestJson = gson.toJson(protocol);
 
+        return requestJson;
     }
 
 }
