@@ -1,10 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package co.unica.kwic.infraestructura;
 
+/*!
+\file   KwicServerSocket.java
+\date   2021-10-25
+\author Julián Martinez <juliansmartinez@unicauca.edu.co> 104618021321
+\brief  Socket del lado del servidor.
+\par Copyright
+Information contained herein is proprietary to and constitutes valuable
+confidential trade secrets of unicauca, and
+is subject to restrictions on use and disclosure.
+\par
+Copyright (c) unicauca 2021. All rights reserved.
+\par
+The copyright notices above do not evidence any actual or
+intended publication of this material.
+*******************************************************************************/
+package co.unica.kwic.infraestructura;
 import co.unicauca.clienteServidor.commons.infra.JsonError;
 import co.unicauca.clienteServidor.commons.infra.Protocol;
 import co.unicauca.kwic.domain.Kwic;

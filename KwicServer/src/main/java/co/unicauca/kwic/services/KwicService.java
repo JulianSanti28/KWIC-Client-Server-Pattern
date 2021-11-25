@@ -1,8 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+/*!
+\file   KwicService.java
+\date   2021-10-25
+\author Julián Martinez <juliansmartinez@unicauca.edu.co> 104618021321
+\brief  Lógica para el desarrollo del problema Key Word In Context.
+\par Copyright
+Information contained herein is proprietary to and constitutes valuable
+confidential trade secrets of unicauca, and
+is subject to restrictions on use and disclosure.
+\par
+Copyright (c) unicauca 2021. All rights reserved.
+\par
+The copyright notices above do not evidence any actual or
+intended publication of this material.
+*******************************************************************************/
 package co.unicauca.kwic.services;
 
 import co.unicauca.kwic.domain.Kwic;
