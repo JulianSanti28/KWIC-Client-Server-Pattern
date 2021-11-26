@@ -16,10 +16,6 @@ intended publication of this material.
 *******************************************************************************/
 package co.unicauca.kwic.client.presentation;
 
-import co.unicauca.kwic.client.access.KwicAccessImplSockets;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author Julián
@@ -27,13 +23,9 @@ import java.util.List;
 public class Cliente {
 
     public static void main(String[] args) throws Exception {
-        KwicAccessImplSockets request = new KwicAccessImplSockets();
-        List<String> listaPalabras = new ArrayList<>();
-        listaPalabras.add("Primer Parcial");
-        listaPalabras.add("Principio de Liskov");
-        listaPalabras.add("Inversión de Dependencias");
-        System.out.println(request.generateKwic(listaPalabras).getResponse().toString());
-
+        /*Inicia el GUI*/
+        GUIPrincipal MyGui = new GUIPrincipal();
+        MyGui.setVisible(true);
     }
 
 }
