@@ -1,5 +1,5 @@
 
-package co.unicauca.clienteServidor.commons.infra;
+package co.unicauca.kwic.infra;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -16,8 +16,8 @@ intended publication of this material.
 *******************************************************************************/
 package co.unicauca.kwic.client.access;
 
-import co.unicauca.clienteServidor.commons.infra.JsonError;
-import co.unicauca.clienteServidor.commons.infra.Protocol;
+import co.unicauca.kwic.infra.JsonError;
+import co.unicauca.kwic.infra.Protocol;
 import co.unicauca.kwic.client.infra.KwicSocket;
 import co.unicauca.kwic.domain.Kwic;
 import com.google.gson.Gson;

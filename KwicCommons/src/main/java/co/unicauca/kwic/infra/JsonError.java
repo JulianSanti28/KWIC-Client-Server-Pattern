@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.clienteServidor.commons.infra;
+package co.unicauca.kwic.infra;
 
 /**
  * Representa un error de estado HTTP

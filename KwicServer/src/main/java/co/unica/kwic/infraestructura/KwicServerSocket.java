@@ -15,8 +15,8 @@ The copyright notices above do not evidence any actual or
 intended publication of this material.
 *******************************************************************************/
 package co.unica.kwic.infraestructura;
-import co.unicauca.clienteServidor.commons.infra.JsonError;
-import co.unicauca.clienteServidor.commons.infra.Protocol;
+import co.unicauca.kwic.infra.JsonError;
+import co.unicauca.kwic.infra.Protocol;
 import co.unicauca.kwic.domain.Kwic;
 import co.unicauca.kwic.services.KwicService;
 import com.google.gson.Gson;
