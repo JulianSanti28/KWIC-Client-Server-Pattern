@@ -1,1 +1,4 @@
 co\unicauca\clienteServidor\commons\infra\Protocol.class
+co\unicauca\kwic\domain\Kwic.class
+co\unicauca\clienteServidor\commons\infra\JsonError.class
+co\unicauca\clienteServidor\commons\infra\Parameter.class

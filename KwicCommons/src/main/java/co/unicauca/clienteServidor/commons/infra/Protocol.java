@@ -1,32 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package co.unicauca.clienteServidor.commons.infra;
 
+package co.unicauca.clienteServidor.commons.infra;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Protocolo de comunicación entre la aplicación cliente y el servidor
  *
- * @author Libardo, Julio
+ * @author Julián
  */
 public class Protocol {
 
+    private String resource;
     private String action;
-    private List<String> listaPalabras;
+    private List<Parameter> parameters;
 
     public Protocol() {
-        this.listaPalabras = new ArrayList<>();
+        parameters = new ArrayList<>();
     }
 
-    @Override
-    public String toString() {
-        return "Protocol{" + "action=" + action + ", listaPalabras=" + listaPalabras + '}';
+    public String getResource() {
+        return resource;
     }
-    
-    
+
+    public void setResource(String resource) {
+        this.resource = resource;
+    }
+
     public String getAction() {
         return action;
     }
@@ -35,16 +34,16 @@ public class Protocol {
         this.action = action;
     }
 
-    public List<String> getListaPalabras() {
-        return listaPalabras;
+    public List<Parameter> getParameters() {
+        return parameters;
     }
 
-    public void setParameters(List<String> lista) {
-        this.listaPalabras = lista;
+    public void setParameters(List<Parameter> parameters) {
+        this.parameters = parameters;
     }
 
-    public void addParameter(String frase) {
-        listaPalabras.add(frase);
+    public void addParameter(String name, List<String> value) {
+        parameters.add(new Parameter(name, value));
     }
 
 }
